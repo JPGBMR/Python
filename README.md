@@ -4,7 +4,7 @@ Introducción a Python...
 
 ```javascript
 # Made by Pablo
-#   Una variable es una contenedor para un valor de diferentes tipo
+#   Variable: Contenedor para un valor de diferentes tipo
 
 '''
 Asi haces comentarios
@@ -37,3 +37,37 @@ print(type(z), z)
 # Matematica
 a = x + y
 ```
+
+Strings...
+
+```javascript
+# Strings en python
+
+nombre = 'Pablo'
+edad = 25
+altura = 1.69
+
+# Concatenar
+print('Hola, mi nombre es ' + nombre + ' y tengo ' + str(edad) +' años de edad  y mido ' + str(altura) + 'cm')
+
+# String Format
+# Argumentos por posición
+print('Mi nombre es {nombre} y tengo {edad} mido {altura} cm'.format(nombre=nombre, edad=edad, altura=altura))
+print(f'Hola, mi nombre es {nombre} tengo {edad} y mido {altura}')# F-Strings (3.6+)
+s = 'holamundo.'                    # String Methods
+print(s.capitalize())               # Capitalize string
+print(s.upper())                    # Make all uppercase
+print(s.lower())                    # Make all lower
+print(s.swapcase())                 # Swap case
+print(len(s))                       # Get length
+print(s.replace('.', 'Hola Todos!'))# Replace
+print(s.startswith('hola'))         # Starts with
+print(s.endswith('.'))              # Ends with
+print(s.split())                    # Split into a list
+print(s.find('h'))                  # Find position
+print(s.isalnum())                  # Is all alphanumeric
+print(s.isalpha())                  # Is all alphabetic
+print(s.isnumeric())                # Is all numeric
+```
+
+
