@@ -192,3 +192,230 @@ while count < 10:
   count += 1
 
 ```
+
+Condicionales (Bucles)...
+
+```javascript
+# If/ Else son usados para condicionar el comportamiento, dependiendo de una variable en verdadora o falsa, true or false.
+
+x = 101
+y = 100
+
+# Operador de comparasión (==, !=, >, <, >=, <=) - Usada para comparar valores
+
+# Simple if
+if x > y:
+  print(f'{x} is greater than {y}')
+
+# If/else
+if x > y:
+  print(f'{x} is greater than {y}')
+else:
+  print(f'{y} is greater than {x}')  
+
+# elif
+if x > y:
+  print(f'{x} is greater than {y}')
+elif x == y:
+  print(f'{x} is equal to {y}')  
+else:
+  print(f'{y} is greater than {x}')  
+
+# Nested if
+if x > 2:
+  if x <= 10:
+    print(f'{x} is greater than 2 and less than or equal to 10')
+
+# Logical operators (and, or, not) - Used to combine conditional statements
+
+if x > 2 and x <= 10: # and
+    print(f'{x} is greater than 2 and less than or equal to 10')
+
+if x > 2 or x <= 10: # or
+    print(f'{x} is greater than 2 or less than or equal to 10')
+
+if not(x == y): # not
+  print(f'{x} is not equal to {y}')
+
+# Membership Operators (not, not in) - Membership operators are used to test if a sequence is presented in an object
+
+numbers = [1,2,3,4,5]
+
+if x in numbers: #  in
+  print(x in numbers)
+
+if x not in numbers: # not in
+  print(x not in numbers)
+
+# Identity Operators (is, is not) - Compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+if x is y: # is
+  print(x is y)
+  
+if x is not y: # is not
+  print(x is not y)
+```
+
+Funciones...
+
+```javascript
+# A bloque de codigo que se ejecuta cuando se invoca
+# Crear función
+def sayHello(name='Sam'):
+    print(f'Hello {name}')
+# Return values
+def getSum(num1, num2):
+    total = num1 + num2
+    return total
+# A lambda función is a small anonymous función.
+# A lambda función can take any number of arguments, but can only have one expression. Very similar to JS arrow función
+getSum = lambda num1, num2: num1 + num2
+print(getSum(10, 3))
+```
+
+Clases...
+
+```javascript
+# Una clase es una plantilla para crear objetos. Objetos tienen propiedades & metodos asociados.
+
+# Crear clase
+class User:
+
+  # Constructor
+  def __init__(self, name, email, age):
+    self.name = name
+    self.email = email
+    self.age = age
+    
+    # Adding Encapsulation of variables... Encapsulation is the concept of making the variables non-accessible or accessible upto some extent from the child classes
+    self._private = 1000 # Encapsulated variables are declares with '_' in the constructor.
+
+  def greeting(self):
+      return f'My name is {self.name} and I am {self.age}'
+
+  def has_birthday(self):
+      self.age += 1
+ 
+ #function para encap variable
+  def print_encap(self):
+      print(self._private)
+
+# Extender class
+class Customer(User):
+  # Constructor
+  def __init__(self, name, email, age):
+      User.__init__(self, name, email, age) #Called proper parent class constructor to make this as proper child inehriting all methods.
+      self.name = name
+      self.email = email
+      self.age = age
+      self.balance = 0
+
+  def set_balance(self, balance):
+      self.balance = balance
+
+  def greeting(self): # Creacion de un método
+      return f'Mi nombre es{self.name} and I am {self.age} and my balance is {self.balance}'
+
+#  Init user object
+pablo = User('Pablo Barriuso', 'pabl0barrius00@gmail.com', 37)
+# Init customer object
+maria = Customer('maria garcia', 'maria@yahoo.com', 25)
+
+maria.set_balance(500)
+print(maria.greeting())
+
+pablo.has_birthday()
+print(pablo.greeting())
+
+#Encapsulation -->
+pablo.print_encap()
+pablo._private = 800 #Changing for pablo
+pablo.print_encap()
+
+# Method inherited from parent
+maria.print_encap() #Changing the variable for pablo doesn't affect marias variable --> Encapsulation
+maria._private = 600
+maria.print_encap()
+
+#Similary changing maria's doesn't affect pablo's variable.
+pablo.print_encap()
+
+```
+
+Loops (Bucles)...
+
+```javascript
+
+
+
+
+# Un loop es usado para iterar sobre una coleccion o sequencia de elemtos (list, a tuple, a dictionary, a set, or a string)
+personas = ['Andres', 'Betty', 'Carlos', 'David']
+
+# For loop simple 
+for person in personas:
+  print(f'Persona Actual: {person}')
+
+for person in personas: # Break
+  if person == 'Carlos':
+    break
+  print(f'Persona iterando actualmente: {person}')
+
+for person in personas: # Continuar
+  if person == 'Sara':
+    continue
+  print(f'Persona iterando actualmente: {person}')
+
+for i in range(len(personas)): # range
+  print(personas[i])
+
+for i in range(0, 11):
+  print(f'Number: {i}')
+
+# While loops se ejecutan indefinitamente mientras una condicion sea verdadera
+count = 0
+while count < 10:
+  print(f'Count: {count}')
+  count += 1
+
+```
+
+Loops (Bucles)...
+
+```javascript
+
+
+
+
+# Un loop es usado para iterar sobre una coleccion o sequencia de elemtos (list, a tuple, a dictionary, a set, or a string)
+personas = ['Andres', 'Betty', 'Carlos', 'David']
+
+# For loop simple 
+for person in personas:
+  print(f'Persona Actual: {person}')
+
+for person in personas: # Break
+  if person == 'Carlos':
+    break
+  print(f'Persona iterando actualmente: {person}')
+
+for person in personas: # Continuar
+  if person == 'Sara':
+    continue
+  print(f'Persona iterando actualmente: {person}')
+
+for i in range(len(personas)): # range
+  print(personas[i])
+
+for i in range(0, 11):
+  print(f'Number: {i}')
+
+# While loops se ejecutan indefinitamente mientras una condicion sea verdadera
+count = 0
+while count < 10:
+  print(f'Count: {count}')
+  count += 1
+
+```
+
+
+
