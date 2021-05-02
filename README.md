@@ -3,7 +3,7 @@
 Introducción a Python...
 
 ```javascript
-# Made by Pablo
+# Made_by_Pablo
 #   Variable: Contenedor para un valor de diferentes tipo
 
 '''
