@@ -4,7 +4,7 @@ Introducción a Python...
 
 ```javascript
 # Made_by_Pablo
-#   Variable: Contenedor para un valor de diferentes tipo
+#   Variable : Contenedor para un valor de diferentes tipo
 
 '''
 Asi haces comentarios
@@ -344,7 +344,7 @@ pablo.print_encap()
 Modulos...
 
 ```javascript
-# A module is basically a file containing a set of functions to include in your application. There are core python modules, modules you can install using the pip package manager (including Django) as well as custom modules
+# Modulo : Es un archivo que contiene un set de funciones a incluir en tu app. Hay core python modules, modules instalables usando pip package manager y tambien custom modules
 
 # Core modules
 import datetime
@@ -356,25 +356,23 @@ from time import time
 # Import custom module
 import validator_9_1
 from validator_9_1 import validate_email
+# Ejemplo de modulo por importar: crear otro archivo de python para exportarlo a este:
 
-# today = datetime.date.today()
-today = date.today()
-timestamp = time()
-
-email = 'test#test.com'
-if validate_email(email):
-  print('Email is valid')
-else:
-  print('Email is bad')
---------------------------------
-#crear otro archivo de python para exportarlo a este:
-
-# Ejemplo de modulo por importar:
 import re
 def validate_email(email):
     if len(email) > 7:
         return bool(re.match("^.+@(\[?)[a-zA-Z0-9-.]+.([a-zA-Z]{2,3}|[0-9]{1,3})(]?)$", email))
 
+
+
+today = date.today() # today = datetime.date.today()
+timestamp = time()
+
+email = 'test#test.com'
+if validate_email(email):
+  print('Email valido')
+else:
+  print('Email invalido')
 
 ```
 
