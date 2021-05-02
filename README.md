@@ -341,79 +341,40 @@ pablo.print_encap()
 
 ```
 
-Loops (Bucles)...
+Modulos...
 
 ```javascript
+# A module is basically a file containing a set of functions to include in your application. There are core python modules, modules you can install using the pip package manager (including Django) as well as custom modules
+
+# Core modules
+import datetime
+from datetime import date
+import time
+from time import time
 
 
+# Import custom module
+import validator_9_1
+from validator_9_1 import validate_email
 
+# today = datetime.date.today()
+today = date.today()
+timestamp = time()
 
-# Un loop es usado para iterar sobre una coleccion o sequencia de elemtos (list, a tuple, a dictionary, a set, or a string)
-personas = ['Andres', 'Betty', 'Carlos', 'David']
+email = 'test#test.com'
+if validate_email(email):
+  print('Email is valid')
+else:
+  print('Email is bad')
+--------------------------------
+#crear otro archivo de python para exportarlo a este:
 
-# For loop simple 
-for person in personas:
-  print(f'Persona Actual: {person}')
+# Ejemplo de modulo por importar:
+import re
+def validate_email(email):
+    if len(email) > 7:
+        return bool(re.match("^.+@(\[?)[a-zA-Z0-9-.]+.([a-zA-Z]{2,3}|[0-9]{1,3})(]?)$", email))
 
-for person in personas: # Break
-  if person == 'Carlos':
-    break
-  print(f'Persona iterando actualmente: {person}')
-
-for person in personas: # Continuar
-  if person == 'Sara':
-    continue
-  print(f'Persona iterando actualmente: {person}')
-
-for i in range(len(personas)): # range
-  print(personas[i])
-
-for i in range(0, 11):
-  print(f'Number: {i}')
-
-# While loops se ejecutan indefinitamente mientras una condicion sea verdadera
-count = 0
-while count < 10:
-  print(f'Count: {count}')
-  count += 1
-
-```
-
-Loops (Bucles)...
-
-```javascript
-
-
-
-
-# Un loop es usado para iterar sobre una coleccion o sequencia de elemtos (list, a tuple, a dictionary, a set, or a string)
-personas = ['Andres', 'Betty', 'Carlos', 'David']
-
-# For loop simple 
-for person in personas:
-  print(f'Persona Actual: {person}')
-
-for person in personas: # Break
-  if person == 'Carlos':
-    break
-  print(f'Persona iterando actualmente: {person}')
-
-for person in personas: # Continuar
-  if person == 'Sara':
-    continue
-  print(f'Persona iterando actualmente: {person}')
-
-for i in range(len(personas)): # range
-  print(personas[i])
-
-for i in range(0, 11):
-  print(f'Number: {i}')
-
-# While loops se ejecutan indefinitamente mientras una condicion sea verdadera
-count = 0
-while count < 10:
-  print(f'Count: {count}')
-  count += 1
 
 ```
 
