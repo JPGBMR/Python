@@ -155,4 +155,40 @@ contactos = [
 print(contactos[1]['nombre'])
 ```
 
+Loops (Bucles)...
 
+```javascript
+
+
+
+
+# Un loop es usado para iterar sobre una coleccion o sequencia de elemtos (list, a tuple, a dictionary, a set, or a string)
+personas = ['Andres', 'Betty', 'Carlos', 'David']
+
+# For loop simple 
+for person in personas:
+  print(f'Persona Actual: {person}')
+
+for person in personas: # Break
+  if person == 'Carlos':
+    break
+  print(f'Persona iterando actualmente: {person}')
+
+for person in personas: # Continuar
+  if person == 'Sara':
+    continue
+  print(f'Persona iterando actualmente: {person}')
+
+for i in range(len(personas)): # range
+  print(personas[i])
+
+for i in range(0, 11):
+  print(f'Number: {i}')
+
+# While loops se ejecutan indefinitamente mientras una condicion sea verdadera
+count = 0
+while count < 10:
+  print(f'Count: {count}')
+  count += 1
+
+```
