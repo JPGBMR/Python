@@ -1,6 +1,7 @@
 # Python_Intro <img src="https://media.giphy.com/media/dxn6fRlTIShoeBr69N/giphy.gif" width="45">
 
 Introducción a Python...
+-------
 
 ```javascript
 # Made_by_Pablo
