@@ -376,5 +376,35 @@ else:
 
 ```
 
+# Archivos - Ficheros...
+
+```bash
+
+# Archivos : Python puede crear, leer, modficar y borrar archivos.
+
+# Crear ó Abrir arch ó fichero
+miArch = open('miArch.txt', 'w')
+
+# Get info
+print('Nombre: ', miArch.name)
+
+# Put Info
+
+miArch.write('Empoderando con python') # Escribir en arch
+miArch.write('\n') # Nueva Linea
+miArch.write('y técnologia')
+miArch.close()
+
+miArch = open('miArch.txt', 'a') 
+miArch.write(' con información') # Añadir a un arch
+miArch.close()
+
+miArch = open('miArch.txt', 'r+') # leer arch
+text = miArch.read(100)
+print(text)
+
+```
+
+
 
 
