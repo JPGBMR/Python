@@ -198,31 +198,27 @@ Condicionales (Bucles)...
 ```javascript
 # If/ Else son usados para condicionar el comportamiento, dependiendo de una variable en verdadora o falsa, true or false.
 
-x = 101
-y = 100
+x, y = 101, 100
 
 # Operador de comparasión (==, !=, >, <, >=, <=) - Usada para comparar valores
 
-# Simple if
-if x > y:
+
+if x > y: # Simple if
   print(f'{x} is greater than {y}')
 
-# If/else
-if x > y:
+if x > y: # If/else
   print(f'{x} is greater than {y}')
 else:
   print(f'{y} is greater than {x}')  
 
-# elif
-if x > y:
+if x > y: # elif
   print(f'{x} is greater than {y}')
 elif x == y:
   print(f'{x} is equal to {y}')  
 else:
   print(f'{y} is greater than {x}')  
 
-# Nested if
-if x > 2:
+if x > 2: # Nested if
   if x <= 10:
     print(f'{x} is greater than 2 and less than or equal to 10')
 
