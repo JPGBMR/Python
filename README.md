@@ -5,7 +5,7 @@ Introducción a Python.
 
 ```javascript
 # Made_by_Pablo
-#   Variable : Contenedor para un valor de diferentes tipo
+#   Variable , contenedor para un valor de diferentes tipo
 
 '''
 Asi haces comentarios
