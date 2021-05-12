@@ -98,7 +98,7 @@ print(cosasquehacer)
 Tuples & Sets...
 
 ```javascript
-# Tuple: colección ordenada inmutable. Permite duplicados
+# Tuple, colección ordenada inmutable. Permite duplicados. La inmutabilidad de los tuples le dan mayor integridad ya que no va a ser cambiada la referencia en ningun otro lado de tu codigo.Listas cambian, Tuples no.
 # Crea tuple al instanciarlo ó usando un constructor => mascotas = tuple(('Buho', 'Cascabel', 'Gato')) es igual a ->  mascotas = tuple(('Buho', 'Cascabel', 'Gato'))
 
 mascotas = tuple(('Buho', 'Cascabel', 'Gato'))
@@ -125,7 +125,7 @@ print(mascotas_set)
 Diccionarios...
 
 ```javascript
-# Un diccionario es una colección desordenada y mutable. NO Permite duplicadosis. Más info en https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+# Diccionario,  colección desordenada y mutable. NO Permite duplicadosis. Pueden existir multi diccionarios Más info en https://docs.python.org/3/tutorial/datastructures.html#dictionaries
 # Crear dict usando constructor contacto2 = dict(primer_nombre='Juan', segundo_nombre='Garcia','telefono': 6226961,'edad': 52, 'altura': 1,79)
 
 contacto2 = dict(primer_nombre='Juan', segundo_nombre='Garcia', telefono= 6226961, edad= 52, altura= 1.79)
@@ -377,7 +377,7 @@ else:
 
 ```bash
 
-# Archivos : Python puede crear, leer, modficar y borrar archivos.
+# Archivos, Python crea, lee, modfica y borra archivos. con funciones preconstruidas
 
 # Crear ó Abrir arch ó fichero
 miArch = open('miArch.txt', 'w')
@@ -387,8 +387,7 @@ print('Nombre: ', miArch.name)
 
 # Put Info
 
-miArch.write('Empoderando con python') # Escribir en arch
-miArch.write('\n') # Nueva Linea
+miArch.write('Empoderando con python\n') # Escribir en arch y Nueva linea
 miArch.write('y técnologia')
 miArch.close()
 
