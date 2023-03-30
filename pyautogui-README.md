@@ -72,3 +72,30 @@ def click_img(img_path,timeout,confidence=0.8):
         
 click_img(img_path,timeout=3)
 ```
+
+#Control Execution with keyboard
+
+```javascript
+import string
+import random
+import keyboard
+import pyautogui as pag
+from time import sleep
+
+def generate_random_password(length):
+    letters = string.ascii_lowercase
+    result_str = ''.join(random.choice(letters) for i in range(length))
+    result_str = 'id'+ result_str
+    return result_str
+
+def main():
+    print('init main - press and hold "q" to quit...')
+    while keyboard.is_pressed('q') == False:
+        password = generate_random_password(8)
+        print(f'New password generated:{password}')
+        sleep(0.5)
+
+if __name__ == '__main__':
+    main()
+```
+
