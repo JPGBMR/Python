@@ -99,3 +99,39 @@ if __name__ == '__main__':
     main()
 ```
 
+#PEP8 main function template
+
+```javascript
+
+
+# Import necessary modules and packages
+import module1
+import module2
+
+# Define function 1
+def function1():
+    # code for function 1 goes here
+    pass
+
+# Define function 2
+def function2():
+    # code for function 2 goes here
+    pass
+
+# Define main function
+def main():
+    # Call function 1
+    function1()
+
+    # Call function 2
+    function2()
+
+    # Call functions from imported modules
+    module1.function3()
+    module2.function4()
+
+# Call main function
+if __name__ == "__main__":
+    main()
+
+```
