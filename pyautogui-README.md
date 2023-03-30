@@ -51,18 +51,24 @@ def MoveTo():
 
 ```javascript
 import pyautogui as pag
+from datetime import datetime
+from time import sleep
 
-def ClickImg(img_path=None):
+img_path = r"C:\Users\Desktop\Screenshot.jpg"
 
-        if img_path is not None:
-            img_path = img_path
-            
-        coords = pag.locateOnScreen(img_path)
-        if coords is None:
-            print('Image not found on the screen!')
-        else:
-            print(f"Imagen encontrada en: {coords}")
-            l,x,w,y = coords
-            pag.click(coords,clicks=1)
-
+def click_img(img_path,timeout,confidence=0.8):
+        initial_time=datetime.now()
+        imagen=None
+        while (datetime.now()-initial_time).seconds<timeout and imagen is None:
+            sleep(0.3)
+            try:
+                imagen= pag.locateCenterOnScreen(img_path,grayscale=True,confidence=confidence)
+            except:
+                print('Image not found on the screen!')
+                continue
+            sleep(0.3)
+            pag.moveTo(imagen,duration=0.25)
+            pag.click()
+        
+click_img(img_path,timeout=3)
 ```
