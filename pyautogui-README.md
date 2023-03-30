@@ -64,6 +64,5 @@ def ClickImg(img_path=None):
             print(f"Imagen encontrada en: {coords}")
             l,x,w,y = coords
             pag.click(coords,clicks=1)
-            sleep(2)
 
 ```
