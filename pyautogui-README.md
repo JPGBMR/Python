@@ -18,76 +18,52 @@ pip install opencv-python
 pip install pyperclip
 ```
 
+#Get Coordinates
+
 ```javascript
-import pyautogui as pt
+import pyautogui as pag
 from time import sleep
 
 
 while True:
-    posXY = pt.position()
-    print(posXY, pt.pixel(posXY[0], posXY[1]))
+    posXY = pag.position()
+    print(posXY, pag.pixel(posXY[0], posXY[1]))
     sleep(1)
     if posXY[0] == 0:
         break
 ```
 
-#Drawing
-
-
-```javascript
-import pyautogui
-import math
-from time import sleep
-
-""" 
-while True:
-    posXY = pt.position()
-    print(posXY, pt.pixel(posXY[0], posXY[1]))
-    sleep(1)
-    if posXY[0] == 0:
-        break """
-
-
-r = 100
-centrex = 510
-centrey = 426
-
-y = centrey - r
-x = math.sqrt((r ** 2) - ((y - centrey) ** 2)) + centrex
-
-oldx = x
-oldy = y
-
-for i in range(r):
-    pyautogui.moveTo(x, y)
-    x = math.sqrt((r ** 2) - ((y - centrey) ** 2)) + centrex
-    pyautogui.dragTo(x, y)
-    tempx = centrex - math.sqrt((r ** 2) - ((y - centrey) ** 2))
-    tempoldx = centrex - math.sqrt((r ** 2) - ((oldy - centrey) ** 2))
-    pyautogui.moveTo(tempoldx, oldy)
-    pyautogui.dragTo(tempx, y)
-    pyautogui.dragTo(x, y) # comment this line if you want to disable fill
-
-    oldx = x
-    oldy = y
-
-    y = y + 0.5
-```
-
-Click and Mouse Move
+#Click and Mouse Move
 
 ```javascript
-import pyautogui as pt
-import keyboard
-from time import sleep
-import pyperclip
+import pyautogui as pag
 
 def MoveTo():
     global x, y
-    x = 39
-    y = 244
-    pt.moveTo(x,y, duration=0.05)
-    pt.click()
-    pt.rightClick()
+    x = 330
+    y = 330
+    pag.moveTo(x,y, duration=0.05)
+    pag.click()
+    pag.rightClick()
+
+```
+#Click Image
+
+```javascript
+import pyautogui as pag
+
+def ClickImg(img_path=None):
+
+        if img_path is not None:
+            img_path = img_path
+            
+        coords = pag.locateOnScreen(img_path)
+        if coords is None:
+            print('Image not found on the screen!')
+        else:
+            print(f"Imagen encontrada en: {coords}")
+            l,x,w,y = coords
+            pag.click(coords,clicks=1)
+            sleep(2)
 
 ```
